@@ -4,7 +4,47 @@ import usersBL from '../src/BL/usersBL'
 const router = exp.Router();
 
 
-router.get('/', (req, res) => res.send(usersBL.getAllUsers()));
+router.get('/', (req, res, next) => {
+    usersBL.getAllUsers().then(users => {
+        res.send(users); 
+    });
+
+
+
+let a,b, c ,d;
+let promiseArray = [];
+
+promiseArray.push(usersBL.getAllUsers());
+promiseArray.push(usersBL.B());
+promiseArray.push(usersBL.C(a,b,c));
+promiseArray.push(usersBL.D(a,b,c,d));
+
+Promise.all(promiseArray).then((data) => {
+    // update mission
+}).catch(err => {
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
 
 router.get('/:id', (req, res) => {
     let userId = req.params.id;
