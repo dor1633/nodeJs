@@ -21,28 +21,8 @@ const addNewUser = (userDetails) => {
     }
 }
 
-function A(a,b,c) {
-    // if the number is not a b c 
-}
-
-function B() {
-    // return all
-}
-
-function C(a) {
-    // if the number is a 
-}
-
-function D(a,b,c,d) {
-    // if the number is bigger then a and b and less than c and d
-}
-
 export default {
     getAllUsers,
     getUserById,
-    addNewUser,
-    A,
-    B,
-    C,
-    D
+    addNewUser
 }
